@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Kockicee2.4
 //
-//  Created by Marijeta Podgorsek on 02/04/2018.
+//  Created by Norman Podgorsek on 02/04/2018.
 //  Copyright © 2018 Norman Podgoršek. All rights reserved.
 //
 
