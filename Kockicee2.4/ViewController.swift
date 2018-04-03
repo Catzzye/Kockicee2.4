@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AVAudioPlayerDelegate {
     
+    var audioPlayer : AVAudioPlayer!
     
     @IBOutlet weak var diceImageView1: UIImageView!
     @IBOutlet weak var diceImageView2: UIImageView!
@@ -73,6 +75,16 @@ class ViewController: UIViewController {
     
     @IBAction func rollButtonPressed(_ sender: UIButton) {
         updateDiceImages()
+        let soundURL = Bundle.main.url(forResource: "rollingDice", withExtension: "wav")
+        
+        do{
+            audioPlayer=try AVAudioPlayer(contentsOf: soundURL!)
+        }
+        catch{
+            print(error)
+        }
+        
+        audioPlayer.play()      
     }
     
     
